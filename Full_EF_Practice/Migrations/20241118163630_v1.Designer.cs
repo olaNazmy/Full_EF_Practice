@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Full_EF_Practice.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241117184504_v1")]
+    [Migration("20241118163630_v1")]
     partial class v1
     {
         /// <inheritdoc />
@@ -24,7 +24,7 @@ namespace Full_EF_Practice.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Full_EF_Practice.Employee", b =>
+            modelBuilder.Entity("Full_EF_Practice.Models.Blog", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -37,7 +37,7 @@ namespace Full_EF_Practice.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Employees");
+                    b.ToTable("Blogs");
                 });
 #pragma warning restore 612, 618
         }
